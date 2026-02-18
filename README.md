@@ -63,25 +63,11 @@ Trades are sampled from empirical on-chain Uniswap V3 data:
 |---|---|
 | `simulation.py` | Core engine: pool math, aggregator, arb search, trade generation, scenario runner |
 | `run_random_prec.py` | 10-seed test with random precision 1-5 per trade (realistic routing) |
-| `run_3m.py` | Single-seed comparison of precision 1 vs 10 on $3M TVL |
-| `run_10m.py` | 12-scenario matrix on $10M TVL (3 ranges x 2 precisions x 2 modes) |
-| `run_100seeds.py` | 100-seed stress test with precision 1 |
-| `verify.py` | Step-by-step verification of individual trades with manual formula checks |
 
 ## Running
 
 ```bash
-# Realistic routing simulation (recommended starting point)
 python3 run_random_prec.py
-
-# Single-seed precision comparison
-python3 run_3m.py
-
-# Full scenario matrix
-python3 run_10m.py
-
-# Step-by-step verification
-python3 verify.py
 ```
 
 ## Technical Details
